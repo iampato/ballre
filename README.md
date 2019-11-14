@@ -1,6 +1,10 @@
 # ballre
 
 A new Flutter project.
+Recharge your phone airtime like a boss
+
+## Demo
+<img src="https://github.com/Iampato/ballre/blob/master/demo/ballre.gif">
 
 ## Getting Started
 
