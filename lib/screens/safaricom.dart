@@ -1,5 +1,11 @@
 import 'dart:io';
+
+import 'package:ballre/service/asset_picker.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wechat_camera_picker/wechat_camera_picker.dart';
+
+import '../results.dart';
 
 class SafaricomPage extends StatefulWidget {
   @override
@@ -30,15 +36,13 @@ class _SafaricomPageState extends State<SafaricomPage> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15.5),
-                child: Text(
-                  "Recharge histroy",
-                  style: Theme.of(context).textTheme.title
-                ),
+                child: Text("Recharge histroy",
+                    style: Theme.of(context).textTheme.headline6),
               ),
               Expanded(
                 child: ListView.builder(
                   itemCount: 10,
-                  itemBuilder: (context,i){
+                  itemBuilder: (context, i) {
                     return ListTile(
                       title: Text("1234 5678 1234 9876"),
                       subtitle: Text("12th Nov 2019"),
@@ -71,8 +75,8 @@ class _SafaricomPageState extends State<SafaricomPage> {
       ),
     );
   }
-  void showAlertDialog(BuildContext context) {
 
+  void showAlertDialog(BuildContext context) {
     showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -81,7 +85,22 @@ class _SafaricomPageState extends State<SafaricomPage> {
             actions: <Widget>[
               FlatButton(
                 child: Text("Camera"),
-                onPressed: () {},
+                onPressed: () async {
+                  AssetsPickerImpl assetsPickerImpl = AssetsPickerImpl();
+                  File imageFile = await assetsPickerImpl.cameraImage(
+                    context,
+                  );
+                  print("#######################################");
+                  print("${imageFile.path}");
+                  print("#######################################");
+                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(builder: (BuildContext context) {
+                      return Results(image: imageFile);
+                    }),
+                  );
+                },
               ),
               FlatButton(
                 child: Text("Gallery"),

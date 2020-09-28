@@ -18,7 +18,7 @@ class AirtelPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.5),
               child: Text("Recharge histroy",
-                  style: Theme.of(context).textTheme.title),
+                  style: Theme.of(context).textTheme.headline6),
             ),
             Expanded(
               child: ListView.builder(
@@ -55,8 +55,8 @@ class AirtelPage extends StatelessWidget {
       ),
     );
   }
-  void showAlertDialog(BuildContext context) {
 
+  void showAlertDialog(BuildContext context) {
     showDialog(
         context: context,
         builder: (BuildContext context) {
