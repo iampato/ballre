@@ -1,23 +1,24 @@
 name: ballre
 description: A new Flutter project.
+publish_to: "none"
+
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^0.1.2
+  cupertino_icons: ^1.0.0
   bubble_tab_indicator: "^0.1.4"
-  firebase_core: ^0.5.0
-  firebase_ml_vision: ^0.9.6+2
+  firebase_core: 0.5.2
+  firebase_ml_vision: 0.9.9
   wechat_camera_picker: ^1.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
 
 flutter:
   uses-material-design: true

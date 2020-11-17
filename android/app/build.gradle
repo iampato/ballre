@@ -26,7 +26,7 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -40,10 +40,10 @@ android {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "ninja.iampato.ballre"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
+         ndkVersion '21.3.6528147'
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -61,8 +61,13 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'com.google.android.gms:play-services-vision:20.1.1'
+implementation 'com.google.android.gms:play-services-vision-common:19.1.1'
+implementation "com.google.android.gms:play-services-vision-face-contour-internal:16.0.2"
+implementation 'com.google.android.gms:play-services-vision-image-label:18.0.5'
+implementation 'com.google.firebase:firebase-ml-vision:24.1.0'
+implementation 'com.google.firebase:firebase-ml-vision-face-model:20.0.2'
+implementation 'com.google.firebase:firebase-ml-model-interpreter:22.0.4'
+implementation 'org.tensorflow:tensorflow-lite:2.0.0'
 }
 apply plugin: 'com.google.gms.google-services'
