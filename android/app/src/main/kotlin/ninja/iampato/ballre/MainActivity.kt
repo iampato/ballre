@@ -1,4 +1,4 @@
-package com.example.ballre
+package ninja.iampato.ballre
 
 import io.flutter.embedding.android.FlutterActivity
 
