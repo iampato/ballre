@@ -10,6 +10,9 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^0.1.2
   bubble_tab_indicator: "^0.1.4"
+  firebase_core: ^0.5.0
+  firebase_ml_vision: ^0.9.6+2
+  wechat_camera_picker: ^1.2.1
 
 dev_dependencies:
   flutter_test:

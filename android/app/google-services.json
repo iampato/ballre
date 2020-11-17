@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "359144972367",
+    "firebase_url": "https://ballre-af24e.firebaseio.com",
+    "project_id": "ballre-af24e",
+    "storage_bucket": "ballre-af24e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359144972367:android:04a49bb5a7e17c0f7c0a3a",
+        "android_client_info": {
+          "package_name": "ninja.iampato.ballre"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359144972367-d957pun0i1e4ho7m8048ffjunvh0q3v5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaOQEd0gnqGnNilSP04Jpd1G1MJLMnpVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359144972367-d957pun0i1e4ho7m8048ffjunvh0q3v5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
